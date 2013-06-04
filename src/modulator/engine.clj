@@ -1,7 +1,7 @@
-(ns modulator.engine)
+(ns modulator.engine
+  (:require [modulator.modulations :as mods]))
 
 ;; Define all the available image modulations
-;(def mods [{:name "resize" :params [:w :h :fit :bg]}])
 (def modulation-config [{:name "resize" :params [:w :h :fit :bg]}
                         {:name "format" :params [:fm]}])
 
@@ -36,3 +36,15 @@
           []
           modulations))
 
+
+
+(defn apply-mods
+  "Applies the parsed modulations
+
+  Args:
+
+    - modulations - <vec> A vector of maps containing the available modulations
+    - image       - <?> The image data to modulate"
+
+  [m]
+  (map mods/modulate m))
