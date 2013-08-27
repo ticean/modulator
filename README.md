@@ -5,6 +5,12 @@ An image manipulation web service for resizing and cropping images.
 **NOTICE**: This is just an API experiment in it's current state and doesn't
 perform any real image processing.
 
+### TODO
+
+* [x] Create a flexible, elegant API.
+* [ ] Fetch images from their source URL.
+* [ ] Implement an image processing library.
+
 ## Prerequisites
 
 You will need [Leiningen][1] 1.7.0 or above installed.
